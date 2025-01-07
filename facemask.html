@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Face Mask Recipes</title>
+	<style>
+   /* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Header and Navigation */
+header {
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffdd57;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px; /* To account for fixed nav */
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Sections */
+.mask-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.mask-section.alternate {
+    background-color: #f0f8ff;
+}
+
+.mask-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2193b0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.mask-image {
+    flex: 1;
+    text-align: center;
+}
+
+.mask-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+    flex: 1;
+    width: 100%;
+}
+
+.ingredients, .instructions {
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.ingredients h3, .instructions h3 {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.ingredients ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.instructions p {
+    text-align: justify;
+}
+
+/* Tips Section */
+.tips-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.tips-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2193b0;
+}
+
+.tips-section ul {
+    list-style-type: none;
+    max-width: 800px;
+    margin: auto;
+}
+
+.tips-section ul li {
+    background: url('icons/checkmark.svg') no-repeat left center;
+    background-size: 20px;
+    padding-left: 30px;
+    margin: 10px 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    color: #555;
+}
+
+.tips-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+}
+
+.social-links a:hover {
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    .details {
+        width: 100%;
+    }
+
+    .tips-section ul li {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        display: none; /* For simplicity, hiding nav links on small screens */
+    }
+
+    /* You can add a hamburger menu for better UX */
+}
+</style>
+</head>
+<body>
+ 
+
+    <main>
+        <!-- Hydration and Glow Section -->
+        <section id="hydration" class="mask-section">
+            <div class="container">
+                <h2>1. For Hydration and Glow</h2>
+                <div class="content">
+                    <div class="mask-image">
+                        <img src="images/hydration-glow.jpg" alt="Hydration and Glow Face Mask Ingredients">
+                    </div>
+                    <div class="details">
+                        <div class="ingredients">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                <li>2 tablespoons of honey</li>
+                                <li>1 tablespoon of plain yogurt</li>
+                                <li>A few drops of rose water or aloe vera gel</li>
+                            </ul>
+                        </div>
+                        <div class="instructions">
+                            <h3>How to Use:</h3>
+                            <p>Mix the ingredients into a smooth paste. Apply to your face and leave for 15-20 minutes before rinsing with lukewarm water. Honey is a natural humectant and antibacterial, while yogurt gently exfoliates and hydrates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Acne-Prone Skin Section -->
+        <section id="acne" class="mask-section alternate">
+            <div class="container">
+                <h2>2. For Acne-Prone Skin</h2>
+                <div class="content">
+                    <div class="mask-image">
+                        <img src="images/acne-prone.jpg" alt="Acne-Prone Skin Face Mask Ingredients">
+                    </div>
+                    <div class="details">
+                        <div class="ingredients">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                <li>2 teaspoons of turmeric powder</li>
+                                <li>1 tablespoon of raw honey</li>
+                                <li>A splash of lemon juice (optional for oily skin)</li>
+                            </ul>
+                        </div>
+                        <div class="instructions">
+                            <h3>How to Use:</h3>
+                            <p>Combine the ingredients into a paste. Apply evenly and let sit for 10-15 minutes. Rinse thoroughly with water. Turmeric has anti-inflammatory properties, and lemon juice helps control oil and brighten skin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exfoliation and Brightening Section -->
+        <section id="exfoliation" class="mask-section">
+            <div class="container">
+                <h2>3. For Exfoliation and Brightening</h2>
+                <div class="content">
+                    <div class="mask-image">
+                        <img src="images/exfoliation-brightening.jpg" alt="Exfoliation and Brightening Face Mask Ingredients">
+                    </div>
+                    <div class="details">
+                        <div class="ingredients">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                <li>1 tablespoon of oatmeal (finely ground)</li>
+                                <li>1 teaspoon of honey</li>
+                                <li>1 tablespoon of mashed banana or papaya</li>
+                            </ul>
+                        </div>
+                        <div class="instructions">
+                            <h3>How to Use:</h3>
+                            <p>Mix well, apply, and gently massage your skin in circular motions for 1-2 minutes. Leave it on for an additional 10 minutes before rinsing. Oatmeal soothes and exfoliates, while banana or papaya provide vitamins and enzymes for a glow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anti-Aging and Firming Section -->
+        <section id="anti-aging" class="mask-section alternate">
+            <div class="container">
+                <h2>4. For Anti-Aging and Firming</h2>
+                <div class="content">
+                    <div class="mask-image">
+                        <img src="images/anti-aging-firming.jpg" alt="Anti-Aging and Firming Face Mask Ingredients">
+                    </div>
+                    <div class="details">
+                        <div class="ingredients">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                <li>1 egg white</li>
+                                <li>1 teaspoon of honey</li>
+                                <li>1 teaspoon of lemon juice (optional)</li>
+                            </ul>
+                        </div>
+                        <div class="instructions">
+                            <h3>How to Use:</h3>
+                            <p>Whisk the egg white until frothy, mix with honey and lemon juice. Apply to your face and let it dry for 10-15 minutes. Rinse off with warm water. Egg whites tighten and firm the skin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dry and Sensitive Skin Section -->
+        <section id="sensitive" class="mask-section">
+            <div class="container">
+                <h2>5. For Dry and Sensitive Skin</h2>
+                <div class="content">
+                    <div class="mask-image">
+                        <img src="images/dry-sensitive.jpg" alt="Dry and Sensitive Skin Face Mask Ingredients">
+                    </div>
+                    <div class="details">
+                        <div class="ingredients">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                <li>2 tablespoons of avocado (mashed)</li>
+                                <li>1 teaspoon of olive oil or almond oil</li>
+                                <li>1 teaspoon of honey</li>
+                            </ul>
+                        </div>
+                        <div class="instructions">
+                            <h3>How to Use:</h3>
+                            <p>Blend the ingredients into a creamy texture. Apply to your skin for 15-20 minutes. Rinse with lukewarm water. Avocado nourishes deeply, and olive oil locks in moisture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="tips-section">
+            <div class="container">
+                <h2>Tips for Using Natural Face Masks</h2>
+                <ul>
+                    <li>Always perform a patch test on your inner arm to ensure no allergic reactions.</li>
+                    <li>Use freshly prepared masks for best results.</li>
+                    <li>Avoid sensitive areas like eyes and lips unless the mask is specifically designed for them.</li>
+                    <li>Follow up with a moisturizer to seal in the benefits.</li>
+                </ul>
+                <img src="images/tips-graphic.png" alt="Tips for Using Natural Face Masks" class="tips-image">
+            </div>
+        </section>
+    </main>
+
+
+</body>
+</html>

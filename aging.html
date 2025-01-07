@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Natural Remedies for Dry Skin</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      padding: 10px;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0;
+    }
+    
+    /* Color Palette */
+    :root {
+      --primary-color: #4CAF50; /* Green */
+      --secondary-color: #2196F3; /* Blue */
+      --accent-color: #FFC107; /* Amber */
+      --background-light: #f9f9f9;
+      --background-dark: #fff;
+      --text-color: #333;
+      --text-light: #fff;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: url('images/hero-bg.jpg') no-repeat center center/cover;
+      color: var(--text-light);
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .hero-content p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .btn {
+      background: var(--primary-color);
+      color: var(--text-light);
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    
+    .btn:hover {
+      background: #45a049;
+      transform: translateY(-2px);
+    }
+    
+    /* Section Styles */
+    .section {
+      padding: 40px 0;
+      background: var(--background-dark);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .section:nth-child(even) {
+      background: var(--background-light);
+    }
+    
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: var(--primary-color);
+      font-family: 'Playfair Display', serif;
+      position: relative;
+    }
+    
+    .section h2::after {
+      content: "";
+      width: 50px;
+      height: 3px;
+      background: var(--primary-color);
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+    
+    .ingredient {
+      display: flex;
+      margin-bottom: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+      transition: transform 0.3s ease;
+    }
+    
+    .ingredient:hover {
+      transform: translateY(-5px);
+    }
+    
+    .ingredient-img {
+      width: 100%;
+      max-width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 20px;
+      flex: 1 1 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .ingredient-content {
+      flex: 2 1 300px;
+      padding: 10px;
+    }
+    
+    .ingredient-content h3 {
+      font-size: 20px;
+      color: var(--text-color);
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .ingredient-content h4 {
+      font-size: 16px;
+      color: var(--primary-color);
+      margin-top: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .ingredient-content p {
+      margin-top: 5px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    /* Recipe Card Styles */
+    .recipe-card {
+      background: var(--background-light);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    
+    .recipe-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .recipe-card h4 {
+      color: var(--secondary-color);
+      margin-top: 15px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .recipe-card ul, .recipe-card ol {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    
+    .recipe-card p {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 28px;
+      }
+      
+      .hero-content p {
+        font-size: 14px;
+      }
+      
+      .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+      
+      .ingredient {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .ingredient-img {
+        margin: 0 0 20px 0;
+        width: 100%;
+        height: auto;
+      }
+      
+      .ingredient-content {
+        flex: 1 1 100%;
+        padding: 0;
+      }
+      
+      .section {
+        padding: 30px 0;
+      }
+      
+      .section h2 {
+        font-size: 24px;
+      }
+      
+      .recipe-card h4 {
+        font-size: 18px;
+      }
+      
+      .recipe-card p, .recipe-card ul, .recipe-card ol {
+        font-size: 14px;
+      }
+    }
+
+recipe-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .recipe-content {
+    flex-direction: column;
+  }
+}
+
+.recipe-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recipe-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.recipe-section h4 {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.recipe-section p, .recipe-section ol {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.icon {
+  margin-right: 8px;
+}
+    
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section id="hero" class="section">
+    <div class="container">
+      <h1>Welcome to Natural Skincare</h1>
+      <p>Discover the best natural ingredients and DIY recipes for healthy, glowing skin.</p>
+      <!-- Add a hero image or background here -->
+    </div>
+  </section>
+
+  <!-- Aloe Vera Section -->
+  <section id="aloe-vera" class="section">
+    <div class="container">
+      <h2>1. Aloe Vera</h2>
+      <div class="ingredient">
+        <img src="images/aloe-vera-gel.jpg" alt="Aloe Vera Gel" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Aloe Vera</h3>
+          <h4>Application:</h4>
+          <p><strong>Mask or Moisturizer:</strong> Use fresh aloe vera gel or a pure product. Apply directly to the skin.</p>
+          <h4>Frequency:</h4>
+          <p>Daily or as needed for hydration and soothing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rosehip Oil Section -->
+  <section id="rosehip-oil" class="section">
+    <div class="container">
+      <h2>2. Rosehip Oil</h2>
+      <div class="ingredient">
+        <img src="images/rosehip-oil.jpg" alt="Rosehip Oil" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Rosehip Oil</h3>
+          <h4>Application:</h4>
+          <p>Apply 2-3 drops to clean skin, gently massaging in circular motions. Use before moisturizer or mix with it.</p>
+          <h4>Frequency:</h4>
+          <p>Twice daily (morning and night).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vitamin C (Lemon, Orange) Section -->
+  <section id="vitamin-c" class="section">
+    <div class="container">
+      <h2>3. Vitamin C (Lemon, Orange)</h2>
+      <div class="ingredient">
+        <img src="images/vitamin-c.jpg" alt="Vitamin C Citrus" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Vitamin C (Lemon, Orange)</h3>
+          <h4>Application:</h4>
+          <p>Use diluted lemon juice (1 part lemon juice, 3 parts water) as a toner or incorporate a Vitamin C serum derived from citrus.</p>
+          <h4>Frequency:</h4>
+          <p>2-3 times per week. Avoid direct sun exposure after application.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Green Tea Extract Section -->
+  <section id="green-tea-extract" class="section">
+    <div class="container">
+      <h2>4. Green Tea Extract</h2>
+      <div class="ingredient">
+        <img src="images/green-tea-extract.jpg" alt="Green Tea Extract" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Green Tea Extract</h3>
+          <h4>Application:</h4>
+          <p>Brew green tea, let it cool, and use it as a toner or mix the extract into a moisturizer.</p>
+          <h4>Frequency:</h4>
+          <p>Daily or 3-4 times per week for antioxidant benefits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shea Butter Section -->
+  <section id="shea-butter" class="section">
+    <div class="container">
+      <h2>5. Shea Butter</h2>
+      <div class="ingredient">
+        <img src="images/sha-butter.jpg" alt="Shea Butter" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Shea Butter</h3>
+          <h4>Application:</h4>
+          <p>Warm a small amount in your hands and apply it to the face or body as a moisturizer.</p>
+          <h4>Frequency:</h4>
+          <p>Nightly for intense hydration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Argan Oil Section -->
+  <section id="argan-oil" class="section">
+    <div class="container">
+      <h2>6. Argan Oil</h2>
+      <div class="ingredient">
+        <img src="images/argan-oil.jpg" alt="Argan Oil" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Argan Oil</h3>
+          <h4>Application:</h4>
+          <p>Apply 2-3 drops to clean skin or mix with your moisturizer.</p>
+          <h4>Frequency:</h4>
+          <p>Twice daily for hydration and elasticity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pomegranate Extract Section -->
+  <section id="pomegranate-extract" class="section">
+    <div class="container">
+      <h2>7. Pomegranate Extract</h2>
+      <div class="ingredient">
+        <img src="images/pomegranate-extract.jpg" alt="Pomegranate Extract" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Pomegranate Extract</h3>
+          <h4>Application:</h4>
+          <p>Use as an oil or cream containing pomegranate extract. Apply evenly to the skin after cleansing.</p>
+          <h4>Frequency:</h4>
+          <p>Daily, preferably in the evening.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Licorice Root Extract Section -->
+  <section id="licorice-root-extract" class="section">
+    <div class="container">
+      <h2>8. Licorice Root Extract</h2>
+      <div class="ingredient">
+        <img src="images/licorice-root-extract.jpg" alt="Licorice Root Extract" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Licorice Root Extract</h3>
+          <h4>Application:</h4>
+          <p>Apply as a spot treatment for dark spots or mix with a toner/serum.</p>
+          <h4>Frequency:</h4>
+          <p>Daily or as needed, focusing on areas with pigmentation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Honey Section -->
+  <section id="honey" class="section">
+    <div class="container">
+      <h2>9. Honey</h2>
+      <div class="ingredient">
+        <img src="images/honey.jpg" alt="Honey" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Honey</h3>
+          <h4>Application:</h4>
+          <p>Use raw honey as a face mask. Apply a thin layer, leave it on for 15-20 minutes, and rinse off.</p>
+          <h4>Frequency:</h4>
+          <p>2-3 times per week for hydration and healing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Turmeric Section -->
+  <section id="turmeric" class="section">
+    <div class="container">
+      <h2>10. Turmeric</h2>
+      <div class="ingredient">
+        <img src="images/turmeric.jpg" alt="Turmeric" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Turmeric</h3>
+          <h4>Application:</h4>
+          <p>Mix a pinch of turmeric with yogurt or honey to create a mask. Apply for 10-15 minutes, then rinse.</p>
+          <h4>Frequency:</h4>
+          <p>Once a week to brighten and reduce inflammation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Natural Ingredients for Anti-Aging Section -->
+  <section id="anti-aging-ingredients" class="section">
+    <div class="container">
+      <h2>11. Natural Ingredients for Anti-Aging</h2>
+      <ul class="anti-aging-list">
+        <li><strong>Vitamin C (Ascorbic Acid):</strong> Promotes collagen production and reduces dark spots.</li>
+        <li><strong>Hyaluronic Acid:</strong> Hydrates skin deeply and reduces fine lines.</li>
+        <li><strong>Retinol (Vitamin A):</strong> Encourages cell turnover and reduces wrinkles. Derived from natural sources like rosehip oil.</li>
+        <li><strong>Green Tea Extract:</strong> Contains antioxidants like EGCG to reduce inflammation and protect skin.</li>
+        <li><strong>Niacinamide (Vitamin B3):</strong> Improves elasticity and brightens the skin.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Inexpensive Natural Solutions Section -->
+  <section id="inexpensive-solutions" class="section">
+    <div class="container">
+      <h2>12. Inexpensive Natural Solutions</h2>
+      <ul class="inexpensive-solutions-list">
+        <li><strong>Aloe Vera Gel:</strong> Moisturizes and soothes skin while improving elasticity.</li>
+        <li><strong>Coconut Oil:</strong> Acts as a natural moisturizer and anti-inflammatory agent.</li>
+        <li><strong>Rose Water:</strong> Tones and refreshes skin while balancing pH levels.</li>
+        <li><strong>Honey:</strong> Natural humectant with antibacterial properties.</li>
+        <li><strong>Turmeric:</strong> Contains curcumin, an anti-inflammatory compound that brightens skin.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Daily Habits Section -->
+  <section id="daily-habits" class="section">
+    <div class="container">
+      <h2>13. Daily Habits</h2>
+      <ul class="daily-habits-list">
+        <li><strong>Stay Hydrated:</strong> Water supports skin elasticity and health.</li>
+        <li><strong>Sun Protection:</strong> Wear broad-spectrum sunscreen daily to prevent premature aging.</li>
+        <li><strong>Healthy Diet:</strong> Include antioxidant-rich foods (berries, leafy greens) and omega-3 fatty acids (flaxseeds, walnuts).</li>
+        <li><strong>Quality Sleep:</strong> Encourages skin repair and reduces stress.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DIY Anti-Aging Masks Section -->
+  <section id="diy-anti-aging-masks" class="section">
+    <div class="container">
+      <h2>14. DIY Anti-Aging Masks</h2>
+
+      <!-- Avocado and Honey Mask -->
+      <div class="diy-mask">
+        <h3>Avocado and Honey Mask</h3>
+        <h4>Ingredients:</h4>
+        <ul>
+          <li>1 ripe avocado</li>
+          <li>2 tablespoons honey</li>
+        </ul>
+        <h4>Instructions:</h4>
+        <ol>
+          <li>Mash the avocado until smooth.</li>
+          <li>Mix in the honey until well combined.</li>
+          <li>Apply the mixture to your face and neck.</li>
+          <li>Leave it on for 15-20 minutes.</li>
+          <li>Rinse off with warm water.</li>
+        </ol>
+        <h4>Benefits:</h4>
+        <p>Hydrates and nourishes the skin, providing essential vitamins and moisture.</p>
+      </div>
+
+      <!-- Yogurt and Turmeric Mask -->
+      <div class="diy-mask">
+        <h3>Yogurt and Turmeric Mask</h3>
+        <h4>Ingredients:</h4>
+        <ul>
+          <li>2 tablespoons plain yogurt</li>
+          <li>1/2 teaspoon turmeric powder</li>
+        </ul>
+        <h4>Instructions:</h4>
+        <ol>
+          <li>Combine yogurt and turmeric powder in a bowl.</li>
+          <li>Mix until smooth.</li>
+          <li>Apply the mask to your face, avoiding the eye area.</li>
+          <li>Leave it on for 10-15 minutes.</li>
+          <li>Rinse off with warm water.</li>
+        </ol>
+        <h4>Benefits:</h4>
+        <p>Brightens skin and tightens pores, while reducing inflammation.</p>
+      </div>
+
+      <!-- Banana and Oatmeal Mask -->
+      <div class="diy-mask">
+        <h3>Banana and Oatmeal Mask</h3>
+        <h4>Ingredients:</h4>
+        <ul>
+          <li>1 ripe banana</li>
+          <li>2 tablespoons oatmeal</li>
+        </ul>
+        <h4>Instructions:</h4>
+        <ol>
+          <li>Mash the banana until smooth.</li>
+          <li>Add oatmeal and mix well.</li>
+          <li>Apply the mixture to your face and neck.</li>
+          <li>Leave it on for 15 minutes.</li>
+          <li>Rinse off with warm water.</li>
+        </ol>
+        <h4>Benefits:</h4>
+        <p>Smoothens skin texture and locks in moisture, providing a soft and supple complexion.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIY Natural Firming Cream Recipe Section -->
+  <section id="diy-firming-cream" class="section">
+    <div class="container">
+      <h2>DIY Natural Firming Cream Recipe</h2>
+
+      <div class="recipe">
+        <h4>Ingredients:</h4>
+        <ul>
+          <li>2 tablespoons Shea Butter</li>
+          <li>1 tablespoon Camellia Seed Oil</li>
+          <li>1 teaspoon Vegetable Glycerin</li>
+          <li>1 teaspoon Alfalfa Extract</li>
+          <li>1 teaspoon Hyaluronic Acid Powder (dissolved in distilled water)</li>
+          <li>5 drops Lavender Essential Oil (optional)</li>
+        </ul>
+
+        <h4>Instructions:</h4>
+        <ol>
+          <li>Melt Shea Butter in a double boiler until liquid.</li>
+          <li>Remove from heat and stir in Camellia Seed Oil.</li>
+          <li>Add Vegetable Glycerin and Alfalfa Extract, mixing well.</li>
+          <li>Dissolve Hyaluronic Acid Powder in water and incorporate into the mixture.</li>
+          <li>Add Lavender Essential Oil, if desired.</li>
+          <li>Whip the mixture with a hand mixer until creamy.</li>
+          <li>Transfer to an airtight container and store in a cool, dark place.</li>
+        </ol>
+
+        <h4>Application:</h4>
+        <p>Use a small amount on cleansed face and neck. Massage in upward motions until absorbed. Apply morning and evening.</p>
+      </div>
+
+      <div class="recipe">
+        <h2>DIY Natural Firming Face Cream</h2>
+        <h4>Ingredients:</h4>
+        <ul>
+          <li>2 tablespoons Shea Butter</li>
+          <li>1 tablespoon Jojoba Oil</li>
+          <li>1 tablespoon Rosehip Seed Oil</li>
+          <li>1 tablespoon Aloe Vera Gel</li>
+          <li>1 teaspoon Vitamin E Oil</li>
+          <li>5 drops Frankincense Essential Oil</li>
+          <li>5 drops Geranium Essential Oil</li>
+        </ul>
+
+        <h4>Instructions:</h4>
+        <ol>
+          <li>Melt Shea Butter: In a double boiler, gently melt the shea butter until it becomes liquid.</li>
+          <li>Combine Oils: Remove from heat and stir in the jojoba oil and rosehip seed oil. Mix thoroughly.</li>
+          <li>Add Aloe Vera and Vitamin E: Once the mixture has cooled slightly, add the aloe vera gel and vitamin E oil. Stir well to combine.</li>
+          <li>Incorporate Essential Oils: Add the drops of frankincense and geranium essential oils for their skin-tightening and rejuvenating properties.</li>
+          <li>Whip the Mixture: Using a hand mixer, whip the mixture until it achieves a creamy consistency.</li>
+          <li>Transfer to Container: Spoon the cream into a clean, airtight jar and store it in a cool, dark place.</li>
+        </ol>
+
+        <h4>Application:</h4>
+        <p>Usage: Apply a small amount to cleansed face and neck, gently massaging in upward circular motions until fully absorbed. Use morning and evening for best results.</p>
+      </div>
+
+      <div class="recipe">
+        <h2>DIY Natural Face Serum</h2>
+        <h4>Ingredients:</h4>
+        <ul>
+          <li>2 tablespoons Jojoba Oil</li>
+          <li>1 tablespoon Rosehip Seed Oil</li>
+          <li>1 teaspoon Vitamin E Oil</li>
+          <li>5 drops Lavender Essential Oil</li>
+          <li>5 drops Frankincense Essential Oil</li>
+        </ul>
+      </div>
+      
+      <!-- Application -->
+      <div class="recipe-section">
+        <h4><span class="icon">💧</span> Application:</h4>
+        <p><strong>Usage:</strong> After cleansing and toning, apply a small amount to your face and neck, gently massaging in upward circular motions until fully absorbed. Use morning and evening for optimal results.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+</body>
+
+</html>

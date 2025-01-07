@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Natural Remedies for Dry Skin</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      padding: 10px;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0;
+    }
+    
+    /* Color Palette */
+    :root {
+      --primary-color: #4CAF50; /* Green */
+      --secondary-color: #2196F3; /* Blue */
+      --accent-color: #FFC107; /* Amber */
+      --background-light: #f9f9f9;
+      --background-dark: #fff;
+      --text-color: #333;
+      --text-light: #fff;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: url('images/hero-bg.jpg') no-repeat center center/cover;
+      color: var(--text-light);
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .hero-content p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .btn {
+      background: var(--primary-color);
+      color: var(--text-light);
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    
+    .btn:hover {
+      background: #45a049;
+      transform: translateY(-2px);
+    }
+    
+    /* Section Styles */
+    .section {
+      padding: 40px 0;
+      background: var(--background-dark);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .section:nth-child(even) {
+      background: var(--background-light);
+    }
+    
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: var(--primary-color);
+      font-family: 'Playfair Display', serif;
+      position: relative;
+    }
+    
+    .section h2::after {
+      content: "";
+      width: 50px;
+      height: 3px;
+      background: var(--primary-color);
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+    
+    .ingredient {
+      display: flex;
+      margin-bottom: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+      transition: transform 0.3s ease;
+    }
+    
+    .ingredient:hover {
+      transform: translateY(-5px);
+    }
+    
+    .ingredient-img {
+      width: 100%;
+      max-width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 20px;
+      flex: 1 1 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .ingredient-content {
+      flex: 2 1 300px;
+      padding: 10px;
+    }
+    
+    .ingredient-content h3 {
+      font-size: 20px;
+      color: var(--text-color);
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .ingredient-content h4 {
+      font-size: 16px;
+      color: var(--primary-color);
+      margin-top: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .ingredient-content p {
+      margin-top: 5px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    /* Recipe Card Styles */
+    .recipe-card {
+      background: var(--background-light);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    
+    .recipe-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .recipe-card h4 {
+      color: var(--secondary-color);
+      margin-top: 15px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .recipe-card ul, .recipe-card ol {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    
+    .recipe-card p {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 28px;
+      }
+      
+      .hero-content p {
+        font-size: 14px;
+      }
+      
+      .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+      
+      .ingredient {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .ingredient-img {
+        margin: 0 0 20px 0;
+        width: 100%;
+        height: auto;
+      }
+      
+      .ingredient-content {
+        flex: 1 1 100%;
+        padding: 0;
+      }
+      
+      .section {
+        padding: 30px 0;
+      }
+      
+      .section h2 {
+        font-size: 24px;
+      }
+      
+      .recipe-card h4 {
+        font-size: 18px;
+      }
+      
+      .recipe-card p, .recipe-card ul, .recipe-card ol {
+        font-size: 14px;
+      }
+    }
+
+recipe-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .recipe-content {
+    flex-direction: column;
+  }
+}
+
+.recipe-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recipe-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.recipe-section h4 {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.recipe-section p, .recipe-section ol {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.icon {
+  margin-right: 8px;
+}
+    
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+
+  <!-- Clay Mask Section -->
+  <section id="clay-mask" class="section">
+    <div class="container">
+      <h2>1. Clay Masks</h2>
+      
+      <div class="ingredient">
+        <img src="images/clay-mask.jpg" alt="Clay Mask" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Clay Masks</h3>
+          <h4>How to Use: DIY Clay Mask</h4>
+          <p><strong>Ingredients:</strong></p>
+          <ul>
+            <li>1 tablespoon bentonite or kaolin clay.</li>
+            <li>1-2 teaspoons rose water or apple cider vinegar (diluted).</li>
+          </ul>
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>Mix the clay and liquid to form a smooth paste.</li>
+            <li>Apply evenly to your face, avoiding the eyes and lips.</li>
+            <li>Leave on for 10-15 minutes or until it dries.</li>
+            <li>Rinse off with lukewarm water and pat dry.</li>
+          </ol>
+          <h4>Frequency:</h4>
+          <p>Use 1-2 times a week for oil control.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Aloe Vera Section -->
+  <section id="aloe-vera" class="section">
+    <div class="container">
+      <h2>2. Aloe Vera</h2>
+      
+      <div class="ingredient">
+        <img src="images/aloe-vera-gel.jpg" alt="Aloe Vera" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Aloe Vera</h3>
+          <h4>How to Use: DIY Aloe Gel Moisturizer</h4>
+          <p><strong>Ingredients:</strong></p>
+          <ul>
+            <li>2 tablespoons fresh aloe vera gel.</li>
+            <li>2-3 drops of tea tree oil (optional, for acne control).</li>
+          </ul>
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>Blend the aloe vera gel until smooth.</li>
+            <li>Add tea tree oil and mix well.</li>
+            <li>Store in a clean jar and refrigerate for freshness.</li>
+            <li>Apply a thin layer after cleansing as a moisturizer.</li>
+          </ol>
+          <h4>Frequency:</h4>
+          <p>Daily, morning and evening.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Green Tea Section -->
+  <section id="green-tea" class="section">
+    <div class="container">
+      <h2>3. Green Tea</h2>
+      
+      <div class="ingredient">
+        <img src="images/green-tea.jpg" alt="Green Tea" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Green Tea</h3>
+          <h4>How to Use: DIY Green Tea Toner</h4>
+          <p><strong>Ingredients:</strong></p>
+          <ul>
+            <li>1 green tea bag.</li>
+            <li>1 cup boiling water.</li>
+          </ul>
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>Brew the green tea and let it cool completely.</li>
+            <li>Pour into a clean spray bottle or jar.</li>
+            <li>Use a cotton pad to apply to your face after cleansing.</li>
+          </ol>
+          <h4>Frequency:</h4>
+          <p>Use twice daily as a toner.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Niacinamide Section -->
+  <section id="niacinamide" class="section">
+    <div class="container">
+      <h2>4. Niacinamide</h2>
+      
+      <div class="ingredient">
+        <img src="images/niacinamide.jpg" alt="Niacinamide" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Niacinamide</h3>
+          <h4>How to Use: DIY Niacinamide Serum</h4>
+          <p><strong>Ingredients:</strong></p>
+          <ul>
+            <li>1 teaspoon niacinamide powder.</li>
+            <li>3 tablespoons distilled water.</li>
+            <li>1/4 teaspoon vegetable glycerin (optional, for hydration).</li>
+          </ul>
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>Dissolve the niacinamide powder in distilled water.</li>
+            <li>Add glycerin and mix well.</li>
+            <li>Transfer to a dropper bottle.</li>
+            <li>Apply a few drops to your face before moisturizing.</li>
+          </ol>
+          <h4>Frequency:</h4>
+          <p>Once daily, preferably in the morning.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Witch Hazel Section -->
+  <section id="witch-hazel" class="section">
+    <div class="container">
+      <h2>5. Witch Hazel</h2>
+      
+      <div class="ingredient">
+        <img src="images/witch-hazel.jpg" alt="Witch Hazel" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Witch Hazel</h3>
+          <h4>How to Use: DIY Witch Hazel Toner</h4>
+          <p><strong>Ingredients:</strong></p>
+          <ul>
+            <li>2 tablespoons pure witch hazel.</li>
+            <li>2 tablespoons rose water.</li>
+            <li>1-2 drops lavender essential oil (optional, for scent).</li>
+          </ul>
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>Mix all ingredients in a clean bottle.</li>
+            <li>Shake well before each use.</li>
+            <li>Apply with a cotton pad after cleansing.</li>
+          </ol>
+          <h4>Frequency:</h4>
+          <p>1-2 times daily.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+</body>
+
+
+</html>

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Moisturizers Guide</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        /* Header and Navigation */
+        header {
+            background: linear-gradient(to right, #6dd5ed, #2193b0);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            position: absolute;
+            top: 20px;
+            width: 100%;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #ffdd57;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px; /* To account for fixed nav */
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-text {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        section.alternate {
+            background-color: #f0f8ff;
+        }
+
+        section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #2193b0;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .item-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .item-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .details {
+            flex: 1;
+            width: 100%;
+        }
+
+        .details h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #00796b;
+        }
+
+        .details p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .details ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        /* DIY Moisturizer Blends */
+        .diy-section {
+            background-color: #fff;
+            padding: 40px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .diy-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #2193b0;
+        }
+
+        .diy-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .diy-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(46, 125, 50, 0.1);
+            width: 100%;
+            max-width: 700px;
+            text-align: left;
+        }
+
+        .diy-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #388e3c;
+        }
+
+        .diy-item p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        /* Choosing Moisturizers Section */
+        .choosing-section {
+            background-color: #e8f5e9;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            border-top: 4px solid #81c784; /* Adding a top border for emphasis */
+        }
+
+        .choosing-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2e7d32;
+        }
+
+        .choosing-guide {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .choosing-tip {
+            background-color: #c8e6c9;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(46, 125, 50, 0.1);
+        }
+
+        .choosing-tip .icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            color: #2e7d32;
+            margin-top: 5px;
+        }
+
+        .choosing-tip span {
+            font-size: 1rem;
+            color: #2e7d32;
+            text-align: left;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            display: inline-block;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-links a img {
+            width: 24px;
+            height: 24px;
+            filter: invert(100%);
+        }
+
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .content {
+                flex-direction: row;
+                gap: 40px;
+                align-items: flex-start;
+            }
+
+            .choosing-guide {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .choosing-tip {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                display: none; /* For simplicity, hiding nav links on small screens */
+            }
+
+            /* You can add a hamburger menu for better UX */
+        }
+    </style>
+</head>
+<body>
+
+   
+    <main>
+        <!-- Plant Oils Section -->
+        <section id="plant-oils">
+            <div class="container">
+                <h2>1. Plant Oils</h2>
+                <div class="content">
+                    <!-- Jojoba Oil -->
+                    <div class="item-image">
+                        <img src="" alt="Jojoba Oil">
+                    </div>
+                    <div class="details">
+                        <h3>Jojoba Oil</h3>
+                        <p><strong>Skin Types:</strong> Normal, Combination, Oily, Sensitive</p>
+                        <p><strong>Why It’s Great:</strong> Closely mimics skin’s own sebum, making it less likely to clog pores.</p>
+                        <h4>How to Use:</h4>
+                        <ul>
+                            <li>Apply 2–3 drops to slightly damp skin.</li>
+                            <li>Gently press into the face or body.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Argan Oil -->
+        <section id="argan-oil" class="alternate">
+            <div class="container">
+                <div class="content">
+                    <div class="item-image">
+                        <img src="" alt="Argan Oil">
+                    </div>
+                    <div class="details">
+                        <h3>Argan Oil</h3>
+                        <p><strong>Skin Types:</strong> Dry, Normal, Mature</p>
+                        <p><strong>Why It’s Great:</strong> Rich in vitamin E and fatty acids; helps repair and hydrate dry or aging skin.</p>
+                        <h4>How to Use:</h4>
+                        <ul>
+                            <li>Use a few drops on damp skin, or mix into your moisturizer.</li>
+                            <li>Safe for daily use on face, body, and even hair.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sweet Almond Oil -->
+        <section id="sweet-almond-oil">
+            <div class="container">
+                <div class="content">
+                    <div class="item-image">
+                        <img src="" alt="Sweet Almond Oil">
+                    </div>
+                    <div class="details">
+                        <h3>Sweet Almond Oil</h3>
+                        <p><strong>Skin Types:</strong> Normal, Dry, Sensitive</p>
+                        <p><strong>Why It’s Great:</strong> Lightweight emollient high in vitamin E.</p>
+                        <h4>How to Use:</h4>
+                        <ul>
+                            <li>Gently massage onto the skin post-shower.</li>
+                            <li>Especially soothing for irritated or eczema-prone areas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rosehip Oil -->
+        <section id="rosehip-oil" class="alternate">
+            <div class="container">
+                <div class="content">
+                    <div class="item-image">
+                        <img src="" alt="Rosehip Oil">
+                    </div>
+                    <div class="details">
+                        <h3>Rosehip Oil</h3>
+                        <p><strong>Skin Types:</strong> Normal, Dry, Combination (especially those with hyperpigmentation or signs of aging)</p>
+                        <p><strong>Why It’s Great:</strong> High in essential fatty acids and vitamins A & C; supports skin regeneration and radiance.</p>
+                        <h4>How to Use:</h4>
+                        <ul>
+                            <li>Apply before bedtime to help reduce the appearance of scars, fine lines, and uneven skin tone.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plant Butters Section -->
+        <section id="plant-butters">
+            <div class="container">
+                <h2>2. Plant Butters</h2>
+                <div class="content">
+                    <!-- Shea Butter -->
+                    <div class="item-image">
+                        <img src="images/sha.jpg" alt="Shea Butter">
+                    </div>
+                    <div class="details">
+                        <h3>Shea Butter</h3>
+                        <p><strong>Skin Types:</strong> Dry, Mature, or Rough Patches (e.g., elbows, knees)</p>
+                        <p><strong>Why It’s Great:</strong> Contains vitamins A and E; deeply nourishing and protective.</p>
+                        <p><strong>Texture:</strong> Thick, can be slightly greasy if used in large amounts.</p>
+                        <h4>How to Use:</h4>
+                        <ul>
+                            <li>Warm a small amount in your palms, then apply to damp skin.</li>
+                            <li>For very dry skin, layer on top of a lighter moisturizer or serum.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cocoa Butter -->
+        <section id="cocoa-butter" class="alternate">
+            <div class="container">
+                <div class="content">
+                    <div class="item-image">
+                        <img src="" alt="Cocoa Butter">
+                    </div>
+                    <div class="details">
+                        <h3>Cocoa Butter</h3>
+                        <p><strong>Skin Types:</strong> Dry, Dehydrated, Mature</p>
+                        <p><strong>Why It’s Great:</strong> High in antioxidants, helps soften and smooth skin.</p>
+                        <p><strong>Texture:</strong> Very thick and occlusive—locks in moisture effectively.</p>
+                        <h4>How to Use:</h4>
+                        <ul>
+                            <li>Often found in balms and lotions.</li>
+                            <li>Great for dry areas and stretch mark care.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mango Butter -->
+        <section id="mango-butter">
+            <div class="container">
+                <div class="content">
+                    <div class="item-image">
+                        <img src="" alt="Mango Butter">
+                    </div>
+                    <div class="details">
+                        <h3>Mango Butter</h3>
+                        <p><strong>Skin Types:</strong> Normal, Dry, Sensitive</p>
+                        <p><strong>Why It’s Great:</strong> Lighter than shea or cocoa butter, yet still rich in fatty acids.</p>
+                        <h4>How to Use:</h4>
+                        <ul>
+                            <li>Melt a small amount between your hands, apply to body or face.</li>
+                            <li>Good for those who find shea or cocoa too heavy.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gels & Humectant-Rich Options Section -->
+        <section id="gels-humectants" class="alternate">
+            <div class="container">
+                <h2>3. Gels & Humectant-Rich Options</h2>
+                <div class="content">
+                    <!-- Aloe Vera Gel -->
+                    <div class="item-image">
+                        <img src="" alt="Aloe Vera Gel">
+                    </div>
+                    <div class="details">
+                        <h3>Aloe Vera Gel</h3>
+                        <p><strong>Skin Types:</strong> All skin types, especially Sensitive or Acne-Prone</p>
+                        <p><strong>Why It’s Great:</strong> Cooling, soothing, and hydrating.</p>
+                        <h4>How to Use:</h4>
+                        <ul>
+                            <li>Apply as a light moisturizer or layer under an oil or butter for additional hydration.</li>
+                            <li>Ideal for calming redness or irritation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Honey -->
+        <section id="honey" class="mask-section">
+            <div class="container">
+                <div class="content">
+                    <div class="item-image">
+                        <img src="" alt="Honey">
+                    </div>
+                    <div class="details">
+                        <h3>Honey (Raw or Manuka)</h3>
+                        <p><strong>Skin Types:</strong> Dry, Acne-Prone, Combination</p>
+                        <p><strong>Why It’s Great:</strong> Natural humectant and antibacterial properties; can help lock in moisture while calming inflammation.</p>
+                        <h4>How to Use:</h4>
+                        <ul>
+                            <li>Use as a quick face mask (leave on for 10–15 minutes, then rinse).</li>
+                            <li>Combine with a small amount of oil to create a moisturizing blend.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Glycerin-Based Serums/Lotions -->
+        <section id="glycerin-serums" class="alternate">
+            <div class="container">
+                <div class="content">
+                    <div class="item-image">
+                        <img src="" alt="Glycerin-Based Serums">
+                    </div>
+                    <div class="details">
+                        <h3>Glycerin-Based Serums/Lotions</h3>
+                        <p><strong>Skin Types:</strong> Dry, Dehydrated, Sensitive</p>
+                        <p><strong>Why It’s Great:</strong> Glycerin is a powerful humectant that draws moisture into the skin.</p>
+                        <h4>How to Use:</h4>
+                        <ul>
+                            <li>Look for lotions or serums that list glycerin high in the ingredient list.</li>
+                            <li>Apply to damp skin to enhance absorption.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIY Moisturizer Blends Section -->
+        <section id="diy-blends" class="mask-section alternate">
+            <div class="container">
+                <h2>4. DIY Moisturizer Blends</h2>
+                <div class="diy-content">
+                    <!-- Simple Oil + Aloe Mix -->
+                    <div class="diy-item">
+                        <h3>Simple Oil + Aloe Mix</h3>
+                        <p>Mix 2 parts aloe vera gel with 1 part light oil (e.g., jojoba).</p>
+                        <p>Whisk or shake well; store in a small pump or dropper bottle.</p>
+                        <p>Moisturizes without feeling too heavy.</p>
+                    </div>
+
+                    <!-- Shea Butter Whip -->
+                    <div class="diy-item">
+                        <h3>Shea Butter Whip</h3>
+                        <p>Gently melt shea butter, combine with a small amount of coconut oil or almond oil, and whip until fluffy.</p>
+                        <p>Ideal for very dry skin on body or rough patches.</p>
+                    </div>
+
+                    <!-- Honey & Rosehip Mask -->
+                    <div class="diy-item">
+                        <h3>Honey & Rosehip Mask</h3>
+                        <p>Combine 1 tablespoon raw honey with 1 teaspoon rosehip oil.</p>
+                        <p>Apply as a 10-minute moisturizing mask before rinsing with warm water.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Choosing Moisturizers for Your Skin Type Section -->
+        <section id="choosing" class="choosing-section">
+            <div class="container">
+                <h2>Choosing Moisturizers for Your Skin Type</h2>
+                <div class="choosing-guide">
+                    <!-- Dry Skin -->
+                    <div class="choosing-tip">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span><strong>Dry Skin</strong><br>
+                        <strong>Best Ingredients:</strong> Rich plant butters (Shea, Cocoa), heavier oils (Argan), occlusives.<br>
+                        <strong>Tip:</strong> Apply on damp skin to lock in moisture. Layer with humectants like glycerin or aloe.</span>
+                    </div>
+
+                    <!-- Oily & Acne-Prone Skin -->
+                    <div class="choosing-tip">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span><strong>Oily & Acne-Prone Skin</strong><br>
+                        <strong>Best Ingredients:</strong> Lightweight, non-comedogenic oils (Jojoba, Grapeseed), aloe vera, gel-based lotions.<br>
+                        <strong>Tip:</strong> Avoid thick butters on the face; they can feel too heavy and clog pores.</span>
+                    </div>
+
+                    <!-- Combination Skin -->
+                    <div class="choosing-tip">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span><strong>Combination Skin</strong><br>
+                        <strong>Best Ingredients:</strong> Medium-weight oils (Rosehip, Squalane), lightweight lotions, or layering techniques (gel on T-zone, richer cream on dry areas).<br>
+                        <strong>Tip:</strong> Target different areas with different products if necessary.</span>
+                    </div>
+
+                    <!-- Sensitive Skin -->
+                    <div class="choosing-tip">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span><strong>Sensitive Skin</strong><br>
+                        <strong>Best Ingredients:</strong> Oat-infused lotions, aloe vera gel, gentle oils (Chamomile or Calendula-infused oils).<br>
+                        <strong>Tip:</strong> Look for fragrance-free, minimal-ingredient formulas to reduce irritation.</span>
+                    </div>
+
+                    <!-- Mature Skin -->
+                    <div class="choosing-tip">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span><strong>Mature Skin</strong><br>
+                        <strong>Best Ingredients:</strong> Antioxidant-rich oils (Argan, Rosehip), butters, hyaluronic acid serums.<br>
+                        <strong>Tip:</strong> Layer a serum with peptides or hyaluronic acid under a richer cream or oil.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+ 
+
+</body>
+</html>

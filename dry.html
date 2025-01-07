@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Natural Remedies for Dry Skin</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      padding: 10px;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0;
+    }
+    
+    /* Color Palette */
+    :root {
+      --primary-color: #4CAF50; /* Green */
+      --secondary-color: #2196F3; /* Blue */
+      --accent-color: #FFC107; /* Amber */
+      --background-light: #f9f9f9;
+      --background-dark: #fff;
+      --text-color: #333;
+      --text-light: #fff;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: url('images/hero-bg.jpg') no-repeat center center/cover;
+      color: var(--text-light);
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .hero-content p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .btn {
+      background: var(--primary-color);
+      color: var(--text-light);
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    
+    .btn:hover {
+      background: #45a049;
+      transform: translateY(-2px);
+    }
+    
+    /* Section Styles */
+    .section {
+      padding: 40px 0;
+      background: var(--background-dark);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .section:nth-child(even) {
+      background: var(--background-light);
+    }
+    
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: var(--primary-color);
+      font-family: 'Playfair Display', serif;
+      position: relative;
+    }
+    
+    .section h2::after {
+      content: "";
+      width: 50px;
+      height: 3px;
+      background: var(--primary-color);
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+    
+    .ingredient {
+      display: flex;
+      margin-bottom: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+      transition: transform 0.3s ease;
+    }
+    
+    .ingredient:hover {
+      transform: translateY(-5px);
+    }
+    
+    .ingredient-img {
+      width: 100%;
+      max-width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 20px;
+      flex: 1 1 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .ingredient-content {
+      flex: 2 1 300px;
+      padding: 10px;
+    }
+    
+    .ingredient-content h3 {
+      font-size: 20px;
+      color: var(--text-color);
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .ingredient-content h4 {
+      font-size: 16px;
+      color: var(--primary-color);
+      margin-top: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .ingredient-content p {
+      margin-top: 5px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    /* Recipe Card Styles */
+    .recipe-card {
+      background: var(--background-light);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    
+    .recipe-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .recipe-card h4 {
+      color: var(--secondary-color);
+      margin-top: 15px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .recipe-card ul, .recipe-card ol {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    
+    .recipe-card p {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 28px;
+      }
+      
+      .hero-content p {
+        font-size: 14px;
+      }
+      
+      .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+      
+      .ingredient {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .ingredient-img {
+        margin: 0 0 20px 0;
+        width: 100%;
+        height: auto;
+      }
+      
+      .ingredient-content {
+        flex: 1 1 100%;
+        padding: 0;
+      }
+      
+      .section {
+        padding: 30px 0;
+      }
+      
+      .section h2 {
+        font-size: 24px;
+      }
+      
+      .recipe-card h4 {
+        font-size: 18px;
+      }
+      
+      .recipe-card p, .recipe-card ul, .recipe-card ol {
+        font-size: 14px;
+      }
+    }
+
+recipe-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .recipe-content {
+    flex-direction: column;
+  }
+}
+
+.recipe-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recipe-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.recipe-section h4 {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.recipe-section p, .recipe-section ol {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.icon {
+  margin-right: 8px;
+}
+    
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+    <!-- Shea Butter Section -->
+  <section id="shea-butter" class="section">
+    <div class="container">
+      <h2>1. Shea Butter</h2>
+      
+      <div class="ingredient">
+        <img src="images/shea butter.jpg" alt="Shea Butter" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Shea Butter</h3>
+          <h4>Application:</h4>
+          <p><strong>Moisturizer:</strong> Take a small amount and warm it between your palms until it becomes creamy. Apply to dry areas such as hands, elbows, knees, and face.</p>
+          <p><strong>Night Treatment:</strong> Apply a generous layer before bed and cover with a soft cloth or cotton gloves to enhance absorption.</p>
+          <h4>Frequency:</h4>
+          <p>Daily or as needed for intense dryness.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+
+  <!-- Aloe Vera Section -->
+  <section id="aloe-vera" class="section">
+    <div class="container">
+      <h2>2. Aloe Vera</h2>
+      
+      <div class="ingredient">
+        <img src="images/aloe-vera-gel.jpg" alt="Aloe Vera" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Aloe Vera</h3>
+          <h4>Application:</h4>
+          <p><strong>Soothing Gel:</strong> Apply pure aloe vera gel directly to dry, irritated skin. Gently massage until absorbed.</p>
+          <p><strong>Face Moisturizer:</strong> Use as a lightweight moisturizer in the morning or as a base before applying other products.</p>
+          <h4>Frequency:</h4>
+          <p>Multiple times daily, especially after exposure to harsh elements.</p>
+        </div>
+      </div>
+      
+    </div>
+  <!-- Natural Oils Section -->
+  <section id="natural-oils" class="section">
+    <div class="container">
+      <h2>3. Natural Oils</h2>
+      
+      <!-- Coconut Oil -->
+      <div class="ingredient">
+        <img src="images/coconut-oil.jpg" alt="Coconut Oil" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Coconut Oil</h3>
+          <h4>Application:</h4>
+          <p><strong>Face and Body:</strong> After cleansing, apply a small amount of coconut oil to damp skin. Gently massage in circular motions until fully absorbed.</p>
+          <p><strong>Hands and Feet:</strong> Use as a nightly treatment by applying a thicker layer and covering with cotton gloves or socks.</p>
+          <h4>Frequency:</h4>
+          <p>Daily, especially after showers or baths.</p>
+        </div>
+      </div>
+      
+ <!-- Rosehip Seed Oil -->
+      <div class="ingredient">
+        <img src="images/rosehip-seed-oil.jpg" alt="Rosehip Seed Oil" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Rosehip Seed Oil</h3>
+          <h4>Application:</h4>
+          <p><strong>Facial Serum:</strong> Apply 2-3 drops to the face after cleansing and before moisturizing. Gently massage in upward motions.</p>
+          <p><strong>Scar Treatment:</strong> Massage a small amount onto scars or dark spots daily to help reduce their appearance.</p>
+          <h4>Frequency:</h4>
+          <p>Daily for optimal results.</p>
+        </div>
+      </div>
+      
+      <!-- Jojoba Oil -->
+      <div class="ingredient">
+        <img src="images/jojoba-oil.jpg" alt="Jojoba Oil" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Jojoba Oil</h3>
+          <h4>Application:</h4>
+          <p><strong>Facial Moisturizer:</strong> Apply a few drops to the face and neck after cleansing. Suitable for all skin types.</p>
+          <p><strong>Hair Conditioner:</strong> Massage into the scalp and through the hair strands to add moisture and shine.</p>
+          <h4>Frequency:</h4>
+          <p>Daily for skin; 2-3 times a week for hair.</p>
+        </div>
+      </div>
+      <!-- Olive Oil -->
+      <div class="ingredient">
+        <img src="images/olive-oil.jpg" alt="Olive Oil" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Olive Oil</h3>
+          <h4>Application:</h4>
+          <p><strong>Moisturizer:</strong> Apply a few drops directly to the skin and massage until absorbed.</p>
+          <p><strong>Bath Additive:</strong> Add 1-2 tablespoons to warm bathwater for overall skin hydration.</p>
+          <h4>Frequency:</h4>
+          <p>Daily or as needed.</p>
+        </div>
+      </div>
+      
+      <!-- Sweet Almond Oil -->
+      <div class="ingredient">
+        <img src="images/sweet-almond-oil.jpg" alt="Sweet Almond Oil" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Sweet Almond Oil</h3>
+          <h4>Application:</h4>
+          <p><strong>Face Serum:</strong> Apply a few drops to the face after cleansing and before moisturizing.</p>
+          <p><strong>Body Moisturizer:</strong> Massage into dry areas like elbows, knees, and heels.</p>
+          <h4>Frequency:</h4>
+          <p>Daily, preferably morning and evening.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+
+
+  </section>
+
+  <!-- Honey Section -->
+  <section id="honey" class="section">
+    <div class="container">
+      <h2>4. Honey</h2>
+      
+      <div class="ingredient">
+        <img src="images/honey.jpg" alt="Honey" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Honey</h3>
+          <h4>Application:</h4>
+          <p><strong>Face Mask:</strong> Apply a thin layer of honey to the face and leave it on for 15-20 minutes. Rinse with warm water.</p>
+          <p><strong>Spot Treatment:</strong> Dab honey on particularly dry or irritated patches.</p>
+          <h4>Frequency:</h4>
+          <p>2-3 times per week for best results.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Oatmeal Baths Section -->
+  <section id="oatmeal-baths" class="section">
+    <div class="container">
+      <h2>5. Oatmeal Baths</h2>
+      
+      <div class="ingredient">
+        <img src="images/oatmeal-bath.jpg" alt="Oatmeal Baths" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Oatmeal Baths</h3>
+          <h4>Preparation:</h4>
+          <p><strong>Colloidal Oatmeal:</strong> Add 1-2 cups of colloidal oatmeal to a lukewarm bath and stir well to disperse.</p>
+          <p><strong>Homemade Colloidal Oatmeal:</strong> Grind regular oats into a fine powder using a blender or food processor before adding to the bath.</p>
+          <h4>Application:</h4>
+          <p>Soak in the oatmeal bath for 15-20 minutes, gently patting the skin dry afterward.</p>
+          <h4>Frequency:</h4>
+          <p>2-3 times per week or as needed to soothe dry skin.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Avocado Masks Section -->
+  <section id="avocado-masks" class="section">
+    <div class="container">
+      <h2>6. Avocado Masks</h2>
+      
+      <div class="ingredient">
+        <img src="images/avocado-mask.jpg" alt="Avocado Masks" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Avocado Masks</h3>
+          <h4>Preparation:</h4>
+          <p><strong>Mask Ingredients:</strong> Mash half an avocado and mix it with 1 tablespoon of olive oil or honey.</p>
+          <h4>Application:</h4>
+          <p>Apply the mixture evenly to the face and neck. Leave on for 15-20 minutes. Rinse off with lukewarm water and pat dry.</p>
+          <h4>Frequency:</h4>
+          <p>Once or twice a week for deep nourishment.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+
+<!-- DIY Natural Skin Moisturizer Section -->
+<section id="diy-moisturizer" class="section">
+  <div class="container">
+    <h2>DIY Natural Dewy Skin Moisturizer</h2>
+    <p>Creating and using your own moisturizer allows you to customize it according to your skin's needs. Follow these steps to make and apply your DIY Natural Dewy Skin Moisturizer effectively.</p>
+    
+      
+    <!-- Recipe Card -->
+    <div class="recipe-card">
+      <!-- Recipe Image -->
+      <div class="recipe-image">
+        <img src="images/1.jpg" alt="DIY Natural Dewy Skin Moisturizer" class="responsive-img" loading="lazy">
+      </div>
+      
+      <!-- Ingredients and Instructions -->
+      <div class="recipe-content">
+        <!-- Ingredients -->
+        <div class="recipe-section">
+          <h4><span class="icon">🛒</span> Ingredients:</h4>
+          <ol>
+            <li><strong>1 tablespoon Shea Butter:</strong> Provides deep moisturization and is rich in vitamins A and E.</li>
+            <li><strong>1 tablespoon Jojoba Oil:</strong> Mimics the skin's natural sebum, offering balanced hydration.</li>
+            <li><strong>1 teaspoon Rosehip Seed Oil:</strong> Rich in essential fatty acids and antioxidants, it helps improve skin texture and tone.</li>
+            <li><strong>1 teaspoon Aloe Vera Gel:</strong> Soothes and hydrates the skin.</li>
+            <li><strong>2-3 drops Lavender Essential Oil:</strong> Known for its calming properties and pleasant fragrance.</li>
+          </ol>
+        </div>
+        
+        <!-- Instructions -->
+        <div class="recipe-section">
+          <h4><span class="icon">🔧</span> Instructions:</h4>
+          <ol>
+            <li><strong>Melt Shea Butter:</strong> In a double boiler, gently melt the shea butter until liquefied.</li>
+            <li><strong>Combine Oils:</strong> Remove from heat and mix in the jojoba oil and rosehip seed oil. Stir until well combined.</li>
+            <li><strong>Add Aloe Vera and Essential Oil:</strong> Once the mixture has cooled slightly, add the aloe vera gel and lavender essential oil. Mix thoroughly.</li>
+            <li><strong>Whip the Mixture:</strong> Using a hand mixer, whip the mixture until it achieves a light, creamy consistency.</li>
+            <li><strong>Transfer to Container:</strong> Spoon the cream into a sterilized glass jar with a tight-fitting lid.</li>
+            <li><strong>Storage:</strong> Store in a cool, dark place and use within 2-3 weeks.</li>
+          </ol>
+        </div>
+        
+        <!-- Application -->
+        <div class="recipe-section">
+          <h4><span class="icon">💧</span> Application:</h4>
+          <p><strong>Usage:</strong> After cleansing and toning, apply a small amount to your face and neck, gently massaging in upward circular motions until fully absorbed. Use morning and evening for optimal results.</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+  </div>
+</section>
+</body>
+</html>

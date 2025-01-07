@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Courses</title>
+    <style>
+        /* Reset and Base Styles */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: #444;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        /* Flex and Grid Layout for Sections */
+        .categories, .courses, .your-course {
+            margin-bottom: 40px;
+        }
+
+        .categories-container, .courses-container, .your-course-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        /* Card Styles */
+        .category, .course {
+            background: #fafafa;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .category img, .course img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+
+        .category p, .course p {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Hover and Active Effects */
+        .category:hover, .course:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .category:hover img, .course:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: #000;
+            border-top: 1px solid #333;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .footer a {
+            text-align: center;
+            color: #fff;
+            font-size: 0.875rem;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #ffcc00;
+        }
+
+        .footer a img {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 5px;
+            filter: invert(100%);
+            transition: transform 0.3s;
+        }
+
+        .footer a:hover img {
+            transform: scale(1.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .categories-container, .courses-container, .your-course-container {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            .category, .course {
+                padding: 10px;
+            }
+
+            .category img, .course img {
+                height: 120px;
+            }
+
+            .footer a {
+                font-size: 0.8rem;
+            }
+
+            .footer a img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .categories-container, .courses-container, .your-course-container {
+                grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+                gap: 10px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+            }
+
+            .category img, .course img {
+                height: 100px;
+            }
+
+            .footer a {
+                font-size: 0.75rem;
+            }
+
+            .footer a img {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        /* Additional Enhancements */
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Touch feedback for mobile */
+        .category:active, .course:active {
+            transform: scale(0.98);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Beauty Courses</h1>
+
+     <section class="categories">
+        <h2>Categories</h2>
+        <div class="categories-container">
+            <div class="category">
+                <a href="dry.html">
+                    <img src="images/dry.jpg" alt="Dry Skin">
+                    <p>Dry Skin</p>
+                </a>
+            </div>
+            <div class="category">
+                <a href="oily.html">
+                    <img src="images/oily.jpg" alt="Oily Skin">
+                    <p>Oily Skin</p>
+                </a>
+            </div>
+            <div class="category">
+                <a href="combination.html">
+                    <img src="images/combination-skin.jpg" alt="Combination Skin">
+                    <p>Combination Skin</p>
+                </a>
+            </div>
+            <div class="category">
+                <a href="sensitive.html">
+                    <img src="images/senstive-skin.jpg" alt="Sensitive Skin">
+                    <p>Sensitive Skin</p>
+                </a>
+            </div>
+            <div class="category">
+                <a href="aging.html">
+                    <img src="images/antiaging.jpg" alt="Aging Skin">
+                    <p>Aging Skin</p>
+                </a>
+            </div>
+            <div class="category">
+                <a href="acne.html">
+                    <img src="images/acne-pone.jpg" alt="Acne-Prone Skin">
+                    <p>Acne-Prone Skin</p>
+                </a>
+            </div>
+            <div class="category">
+                <a href="all-skin.html">
+                    <img src="images/all-skin-type.jpg" alt="All Skin Types">
+                    <p>All Skin Types</p>
+                </a>
+            </div>
+            <div class="category">
+                <a href="general-tips.html">
+                    <img src="images/1.jpg" alt="General Tips">
+                    <p>General Tips</p>
+                </a>
+            </div>
+        </div>
+    </section>
+<!--
+    <section class="courses">
+        <h2>Courses</h2>
+        <div class="courses-container">
+            <div class="course">
+                <img src="images/9.jpg" alt="DIY Face Wash">
+                <p>DIY Face Wash</p>
+            </div>
+            <div class="course">
+                <img src="images/10.jpg" alt="Skincare Routine">
+                <p>Skincare Routine</p>
+            </div>
+            <div class="course">
+                <img src="images/11.jpg" alt="Advanced Makeup Techniques">
+                <p>Advanced Makeup Techniques</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="your-course">
+        <h2>Your Course</h2>
+        <div class="your-course-container">
+            <div class="course">
+                <img src="images/12.jpg" alt="Your Current Course">
+                <p>Your Current Course</p>
+            </div>
+        </div>
+    </section>
+-->
+</br>
+</br>
+</br>
+</div>
+
+<div class="footer">
+    <a href="index.html">
+        <img src="images/home.jpg" alt="Home">
+        <span>Home</span>
+    </a>
+    <a href="explore.html">
+        <img src="images/explore.jpg" alt="Explore">
+        <span>Explore</span>
+    </a>
+    <a href="#">
+        <img src="images/course.jpg" alt="Courses">
+        <span>Courses</span>
+    </a>
+    <a href="#">
+        <img src="images/articles.jpg" alt="Articles">
+        <span>Articles</span>
+    </a>
+    <a href="#">
+        <img src="images/pro.jpg" alt="Pro">
+        <span>Pro</span>
+    </a>
+</div>
+
+</body>
+</html>

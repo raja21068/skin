@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Natural Remedies for Dry Skin</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      padding: 10px;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0;
+    }
+    
+    /* Color Palette */
+    :root {
+      --primary-color: #4CAF50; /* Green */
+      --secondary-color: #2196F3; /* Blue */
+      --accent-color: #FFC107; /* Amber */
+      --background-light: #f9f9f9;
+      --background-dark: #fff;
+      --text-color: #333;
+      --text-light: #fff;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: url('images/hero-bg.jpg') no-repeat center center/cover;
+      color: var(--text-light);
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .hero-content p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .btn {
+      background: var(--primary-color);
+      color: var(--text-light);
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    
+    .btn:hover {
+      background: #45a049;
+      transform: translateY(-2px);
+    }
+    
+    /* Section Styles */
+    .section {
+      padding: 40px 0;
+      background: var(--background-dark);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .section:nth-child(even) {
+      background: var(--background-light);
+    }
+    
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: var(--primary-color);
+      font-family: 'Playfair Display', serif;
+      position: relative;
+    }
+    
+    .section h2::after {
+      content: "";
+      width: 50px;
+      height: 3px;
+      background: var(--primary-color);
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+    
+    .ingredient {
+      display: flex;
+      margin-bottom: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+      transition: transform 0.3s ease;
+    }
+    
+    .ingredient:hover {
+      transform: translateY(-5px);
+    }
+    
+    .ingredient-img {
+      width: 100%;
+      max-width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 20px;
+      flex: 1 1 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .ingredient-content {
+      flex: 2 1 300px;
+      padding: 10px;
+    }
+    
+    .ingredient-content h3 {
+      font-size: 20px;
+      color: var(--text-color);
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .ingredient-content h4 {
+      font-size: 16px;
+      color: var(--primary-color);
+      margin-top: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .ingredient-content p {
+      margin-top: 5px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    /* Recipe Card Styles */
+    .recipe-card {
+      background: var(--background-light);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    
+    .recipe-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .recipe-card h4 {
+      color: var(--secondary-color);
+      margin-top: 15px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .recipe-card ul, .recipe-card ol {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    
+    .recipe-card p {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 28px;
+      }
+      
+      .hero-content p {
+        font-size: 14px;
+      }
+      
+      .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+      
+      .ingredient {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .ingredient-img {
+        margin: 0 0 20px 0;
+        width: 100%;
+        height: auto;
+      }
+      
+      .ingredient-content {
+        flex: 1 1 100%;
+        padding: 0;
+      }
+      
+      .section {
+        padding: 30px 0;
+      }
+      
+      .section h2 {
+        font-size: 24px;
+      }
+      
+      .recipe-card h4 {
+        font-size: 18px;
+      }
+      
+      .recipe-card p, .recipe-card ul, .recipe-card ol {
+        font-size: 14px;
+      }
+    }
+
+recipe-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .recipe-content {
+    flex-direction: column;
+  }
+}
+
+.recipe-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recipe-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.recipe-section h4 {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.recipe-section p, .recipe-section ol {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.icon {
+  margin-right: 8px;
+}
+    
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header id="hero" class="section">
+    <div class="container">
+      <h1>Natural Skin Care for Combination Skin</h1>
+      <p>Explore a curated guide to balance hydration and control oil with DIY remedies using natural ingredients.</p>
+    </div>
+  </header>
+
+  <!-- Shea Butter Section -->
+  <section id="shea-butter" class="section">
+    <div class="container">
+      <h2>1. Shea Butter</h2>
+      <div class="ingredient">
+        <img src="images/sha-butter.jpg" alt="Shea Butter" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Shea Butter</h3>
+          <h4>Applications:</h4>
+          <p><strong>Moisturizer:</strong> Warm a small amount between your palms and apply to dry areas like hands, elbows, and face.</p>
+          <p><strong>Night Treatment:</strong> Apply a generous layer before bed for intense hydration.</p>
+          <h4>Frequency:</h4>
+          <p>Use daily or as needed for dryness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aloe Vera Section -->
+  <section id="aloe-vera" class="section">
+    <div class="container">
+      <h2>2. Aloe Vera</h2>
+      <div class="ingredient">
+        <img src="images/aloe-vera-gel.jpg" alt="Aloe Vera" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Aloe Vera</h3>
+          <h4>Applications:</h4>
+          <p><strong>Soothing Gel:</strong> Apply pure aloe vera gel to irritated skin and massage until absorbed.</p>
+          <p><strong>Face Moisturizer:</strong> Use as a lightweight base before applying other products.</p>
+          <h4>Frequency:</h4>
+          <p>Apply multiple times daily, especially after sun exposure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Natural Oils Section -->
+  <section id="natural-oils" class="section">
+    <div class="container">
+      <h2>3. Natural Oils</h2>
+      
+      <!-- Jojoba Oil -->
+      <div class="ingredient">
+        <img src="images/jojoba-oil.jpg" alt="Jojoba Oil" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Jojoba Oil</h3>
+          <h4>Applications:</h4>
+          <p><strong>Facial Moisturizer:</strong> Apply a few drops to the face and neck after cleansing.</p>
+          <p><strong>Hair Conditioner:</strong> Massage into the scalp and through hair strands to add moisture and shine.</p>
+          <h4>Frequency:</h4>
+          <p>Daily for skin; 2-3 times a week for hair.</p>
+        </div>
+      </div>
+
+      <!-- Sweet Almond Oil -->
+      <div class="ingredient">
+        <img src="images/sweet-almond-oil.jpg" alt="Sweet Almond Oil" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Sweet Almond Oil</h3>
+          <h4>Applications:</h4>
+          <p><strong>Face Serum:</strong> Use a few drops before applying moisturizer.</p>
+          <p><strong>Body Moisturizer:</strong> Massage into dry areas like elbows, knees, and heels.</p>
+          <h4>Frequency:</h4>
+          <p>Use daily, preferably morning and evening.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Honey Section -->
+  <section id="honey" class="section">
+    <div class="container">
+      <h2>4. Honey</h2>
+      <div class="ingredient">
+        <img src="images/honey.jpg" alt="Honey" class="ingredient-img">
+        <div class="ingredient-content">
+          <h3>Honey</h3>
+          <h4>Applications:</h4>
+          <p><strong>Face Mask:</strong> Apply a thin layer of honey to the face and leave for 15-20 minutes. Rinse with warm water.</p>
+          <p><strong>Spot Treatment:</strong> Dab on dry or irritated patches for quick hydration.</p>
+          <h4>Frequency:</h4>
+          <p>2-3 times per week for best results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIY Moisturizer Section -->
+  <section id="diy-moisturizer" class="section">
+    <div class="container">
+      <h2>DIY Balanced Moisturizer for Combination Skin</h2>
+      <div class="recipe-card">
+        <div class="recipe-image">
+          <img src="images/2.jpg" alt="DIY Moisturizer" class="responsive-img">
+        </div>
+        <div class="recipe-content">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>1 tbsp Shea Butter</li>
+            <li>1 tbsp Jojoba Oil</li>
+            <li>1 tsp Aloe Vera Gel</li>
+            <li>1 tsp Sweet Almond Oil</li>
+            <li>2-3 drops Lavender Essential Oil</li>
+          </ul>
+          <h4>Instructions:</h4>
+          <ol>
+            <li>Melt Shea Butter in a double boiler.</li>
+            <li>Add Jojoba Oil and Sweet Almond Oil; mix well.</li>
+            <li>Allow to cool slightly, then add Aloe Vera Gel and Lavender Essential Oil.</li>
+            <li>Whip until creamy and transfer to a sterilized jar.</li>
+          </ol>
+          <h4>Application:</h4>
+          <p>Apply a small amount to your face and neck after cleansing. Use morning and evening.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Natural Remedies for Dry Skin</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      padding: 10px;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0;
+    }
+    
+    /* Color Palette */
+    :root {
+      --primary-color: #4CAF50; /* Green */
+      --secondary-color: #2196F3; /* Blue */
+      --accent-color: #FFC107; /* Amber */
+      --background-light: #f9f9f9;
+      --background-dark: #fff;
+      --text-color: #333;
+      --text-light: #fff;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: url('images/hero-bg.jpg') no-repeat center center/cover;
+      color: var(--text-light);
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .hero-content p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .btn {
+      background: var(--primary-color);
+      color: var(--text-light);
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    
+    .btn:hover {
+      background: #45a049;
+      transform: translateY(-2px);
+    }
+    
+    /* Section Styles */
+    .section {
+      padding: 40px 0;
+      background: var(--background-dark);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .section:nth-child(even) {
+      background: var(--background-light);
+    }
+    
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: var(--primary-color);
+      font-family: 'Playfair Display', serif;
+      position: relative;
+    }
+    
+    .section h2::after {
+      content: "";
+      width: 50px;
+      height: 3px;
+      background: var(--primary-color);
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+    
+    .sub-section {
+      margin-bottom: 40px;
+    }
+    
+    .sub-section h3 {
+      font-size: 22px;
+      color: var(--secondary-color);
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+      border-bottom: 2px solid var(--secondary-color);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    
+    .ingredient {
+      display: flex;
+      margin-bottom: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+      transition: transform 0.3s ease;
+    }
+    
+    .ingredient:hover {
+      transform: translateY(-5px);
+    }
+    
+    .ingredient-img {
+      width: 100%;
+      max-width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 20px;
+      flex: 1 1 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .ingredient-content {
+      flex: 2 1 300px;
+      padding: 10px;
+    }
+    
+    .ingredient-content h4 {
+      font-size: 18px;
+      color: var(--text-color);
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .ingredient-content p {
+      margin-top: 5px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    /* DIY Masks Grid */
+    .diy-masks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    
+    /* DIY Masks Card */
+    .diy-mask {
+      background: var(--background-light);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .diy-mask:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .diy-mask h3 {
+      font-size: 20px;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+    }
+    
+    .diy-mask .mask-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    
+    .diy-mask h4 {
+      font-size: 16px;
+      color: var(--secondary-color);
+      margin-bottom: 5px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .diy-mask ul, .diy-mask ol {
+      margin-left: 20px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    
+    .diy-mask p {
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: center;
+      color: #555;
+    }
+    
+    /* Footer Styling */
+    .footer {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 20px 0;
+      text-align: center;
+    }
+    
+    .footer a {
+      color: #ecf0f1;
+      text-decoration: none;
+    }
+    
+    .footer a:hover {
+      color: #27ae60;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 28px;
+      }
+      
+      .hero-content p {
+        font-size: 14px;
+      }
+      
+      .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+      
+      .ingredient {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .ingredient-img {
+        margin: 0 0 20px 0;
+        width: 100%;
+        height: auto;
+      }
+      
+      .ingredient-content {
+        flex: 1 1 100%;
+        padding: 0;
+      }
+      
+      .section {
+        padding: 30px 0;
+      }
+      
+      .section h2 {
+        font-size: 24px;
+      }
+      
+      .sub-section h3 {
+        font-size: 20px;
+      }
+      
+      .diy-mask h3 {
+        font-size: 18px;
+      }
+      
+      .diy-mask h4 {
+        font-size: 14px;
+      }
+      
+      .diy-mask p {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <!-- Acne Care Section -->
+  <section id="acne-care" class="section">
+    <div class="container">
+      <h2>Acne Care</h2>
+
+      <!-- 1. Cleansing Sub-Section -->
+      <div id="cleansing" class="sub-section">
+        <h3>1. Cleansing</h3>
+        
+        <!-- Honey Cleanser -->
+        <div class="ingredient">
+          <img src="images/honey.jpg" alt="Honey Cleanser" class="ingredient-img">
+          <div class="ingredient-content">
+            <h4>Honey Cleanser</h4>
+            <p>Raw honey has natural antibacterial and anti-inflammatory properties. Apply a thin layer, massage gently, and rinse off.</p>
+          </div>
+        </div>
+        
+        <!-- Apple Cider Vinegar (Diluted) -->
+        <div class="ingredient">
+          <img src="images/apple-cider-vinegar.jpg" alt="Apple Cider Vinegar" class="ingredient-img">
+          <div class="ingredient-content">
+            <h4>Apple Cider Vinegar (Diluted)</h4>
+            <p>Acts as a toner to balance the skin's pH and reduce bacteria. Mix 1 part vinegar with 3 parts water.</p>
+          </div>
+        </div>
+        
+        <!-- Aloe Vera Gel -->
+        <div class="ingredient">
+          <img src="images/aloe-vera-gel.jpg" alt="Aloe Vera Gel" class="ingredient-img">
+          <div class="ingredient-content">
+            <h4>Aloe Vera Gel</h4>
+            <p>A gentle cleanser for sensitive and acne-prone skin. Use pure aloe vera directly from the plant or a store-bought natural gel.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Exfoliation Sub-Section -->
+      <div id="exfoliation" class="sub-section">
+        <h3>2. Exfoliation</h3>
+        
+        <!-- Oatmeal Scrub -->
+        <div class="ingredient">
+          <img src="images/oatmeal.jpg" alt="Oatmeal Scrub" class="ingredient-img">
+          <div class="ingredient-content">
+            <h4>Oatmeal Scrub</h4>
+            <p>Mix finely ground oats with water to create a gentle exfoliating paste. It removes dead skin and soothes irritation.</p>
+          </div>
+        </div>
+        
+        <!-- Sugar and Honey Scrub -->
+        <div class="ingredient">
+          <img src="images/sugar-honey-scrub.jpg" alt="Sugar and Honey Scrub" class="ingredient-img">
+          <div class="ingredient-content">
+            <h4>Sugar and Honey Scrub</h4>
+            <p>For occasional use to remove dead skin without damaging the skin barrier.</p>
+          </div>
+        </div>
+        
+        <!-- Baking Soda (Caution) -->
+        <div class="ingredient">
+          <img src="images/baking-soda.jpg" alt="Baking Soda" class="ingredient-img">
+          <div class="ingredient-content">
+            <h4>Baking Soda (Caution)</h4>
+            <p>Use sparingly and in small amounts (mixed with water) as it can irritate sensitive skin.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Spot Treatments Sub-Section -->
+      <div id="spot-treatments" class="sub-section">
+        <h3>3. Spot Treatments</h3>
+        
+        <!-- Tea Tree Oil -->
+        <div class="ingredient">
+          <img src="images/tea-tree-oil.jpg" alt="Tea Tree Oil" class="ingredient-img">
+          <div class="ingredient-content">
+            <h4>Tea Tree Oil</h4>
+            <p>A powerful antibacterial agent. Dilute with a carrier oil (like jojoba or coconut oil) and apply to blemishes.</p>
+          </div>
+        </div>
+        
+        <!-- Turmeric Paste -->
+        <div class="ingredient">
+          <img src="images/turmeric-paste.jpg" alt="Turmeric Paste" class="ingredient-img">
+          <div class="ingredient-content">
+            <h4>Turmeric Paste</h4>
+            <p>Mix turmeric powder with water or aloe vera to calm inflammation and redness.</p>
+          </div>
+        </div>
+        
+        <!-- Witch Hazel -->
+        <div class="ingredient">
+          <img src="images/witch-hazel.jpg" alt="Witch Hazel" class="ingredient-img">
+          <div class="ingredient-content">
+            <h4>Witch Hazel</h4>
+            <p>A natural astringent that reduces oiliness and tightens pores.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Moisturizing Sub-Section -->
+      <div id="moisturizing" class="sub-section">
+        <h3>4. Moisturizing</h3>
+        
+        <!-- Aloe Vera Gel -->
+        <div class="ingredient">
+          <img src="images/aloe-vera-gel.jpg" alt="Aloe Vera Gel" class="ingredient-img">
+          <div class="ingredient-content">
+            <h4>Aloe Vera Gel</h4>
+            <p>Lightweight and non-comedogenic, it hydrates without clogging pores.</p>
+          </div>
+        </div>
+        
+        <!-- Jojoba Oil -->
+        <div class="ingredient">
+          <img src="images/jojoba-oil.jpg" alt="Jojoba Oil" class="ingredient-img">
+          <div class="ingredient-content">
+            <h4>Jojoba Oil</h4>
+            <p>Mimics skin’s natural oils and balances sebum production.</p>
+          </div>
+        </div>
+        
+        <!-- Rosehip Oil -->
+        <div class="ingredient">
+          <img src="images/rosehip-oil.jpg" alt="Rosehip Oil" class="ingredient-img">
+          <div class="ingredient-content">
+            <h4>Rosehip Oil</h4>
+            <p>Rich in vitamin A, it promotes healing and reduces scars.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DIY Acne Care Masks Section -->
+  <section id="diy-acne-masks" class="section">
+    <div class="container">
+      <h2>DIY Acne Care Masks</h2>
+      
+      <!-- Masks Grid -->
+      <div class="diy-masks-grid">
+        
+        <!-- Tea Tree and Honey Mask -->
+        <div class="diy-mask">
+          <h3>Tea Tree and Honey Mask</h3>
+          <img src="images/tea-tree-honey-mask.jpg" alt="Tea Tree and Honey Mask" class="mask-image">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>1 teaspoon Tea Tree Oil</li>
+            <li>2 tablespoons Raw Honey</li>
+          </ul>
+          <h4>Instructions:</h4>
+          <ol>
+            <li>Mix tea tree oil with raw honey in a small bowl until well combined.</li>
+            <li>Apply the mixture to clean, dry areas with acne.</li>
+            <li>Leave it on for 15-20 minutes.</li>
+            <li>Rinse off with warm water.</li>
+          </ol>
+          <h4>Benefits:</h4>
+          <p>Reduces bacteria and soothes inflamed skin, promoting faster healing of blemishes.</p>
+        </div>
+        
+        <!-- Turmeric and Yogurt Mask -->
+        <div class="diy-mask">
+          <h3>Turmeric and Yogurt Mask</h3>
+          <img src="images/turmeric-yogurt-mask.jpg" alt="Turmeric and Yogurt Mask" class="mask-image">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>2 tablespoons Plain Yogurt</li>
+            <li>1/2 teaspoon Turmeric Powder</li>
+          </ul>
+          <h4>Instructions:</h4>
+          <ol>
+            <li>Combine plain yogurt with turmeric powder in a bowl.</li>
+            <li>Mix until you achieve a smooth paste.</li>
+            <li>Apply the mask to your face, focusing on acne-prone areas.</li>
+            <li>Leave it on for 10-15 minutes.</li>
+            <li>Rinse off with lukewarm water.</li>
+          </ol>
+          <h4>Benefits:</h4>
+          <p>Calms inflammation, reduces redness, and provides gentle exfoliation to unclog pores.</p>
+        </div>
+        
+        <!-- Witch Hazel and Aloe Vera Mask -->
+        <div class="diy-mask">
+          <h3>Witch Hazel and Aloe Vera Mask</h3>
+          <img src="images/witch-hazel-aloe-mask.jpg" alt="Witch Hazel and Aloe Vera Mask" class="mask-image">
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>2 tablespoons Aloe Vera Gel</li>
+            <li>1 tablespoon Witch Hazel</li>
+          </ul>
+          <h4>Instructions:</h4>
+          <ol>
+            <li>Mix aloe vera gel with witch hazel in a bowl until well blended.</li>
+            <li>Apply the mixture to your face, concentrating on areas with acne.</li>
+            <li>Leave it on for 15-20 minutes.</li>
+            <li>Rinse off with cool water.</li>
+          </ol>
+          <h4>Benefits:</h4>
+          <p>Reduces oiliness, tightens pores, and provides soothing relief to irritated skin.</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+
+</body>
+</html>
