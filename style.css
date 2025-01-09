@@ -105,7 +105,7 @@ nav {
 /* Video Gallery */
 .video-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Increased min width */
     gap: 20px;
     padding: 20px 0;
 }
@@ -131,11 +131,15 @@ nav {
 .video-wrapper {
     position: relative;
     background-color: #000;
+    aspect-ratio: 16 / 9; /* Maintains aspect ratio */
+    width: 100%;
 }
 
 .custom-video {
     width: 100%;
+    height: auto;
     display: block;
+    object-fit: contain; /* Maintains video aspect ratio */
 }
 
 .video-controls {
@@ -229,5 +233,9 @@ footer {
 
     .video-gallery {
         grid-template-columns: 1fr;
+    }
+
+    .video-wrapper {
+        aspect-ratio: auto; /* Allows natural aspect ratio on small screens */
     }
 }
