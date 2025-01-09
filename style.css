@@ -131,8 +131,9 @@ nav {
 .video-wrapper {
     position: relative;
     background-color: #000;
-    aspect-ratio: 16 / 9; /* Maintains aspect ratio */
+    /* aspect-ratio: 16 / 9; */ /* Removed or set to auto */
     width: 100%;
+    height: auto; /* Added to allow height to adjust based on content */
 }
 
 .custom-video {
@@ -236,6 +237,8 @@ footer {
     }
 
     .video-wrapper {
-        aspect-ratio: auto; /* Allows natural aspect ratio on small screens */
+        /* aspect-ratio: auto; */ /* Already handled by removing or setting to auto */
+        width: 100%;
+        height: auto;
     }
 }
