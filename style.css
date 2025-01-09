@@ -128,33 +128,99 @@ nav {
     background-color: #f1f1f1;
 }
 
-.video-wrapper {
-    position: relative;
-    background-color: #000;
-    /* aspect-ratio: 16 / 9; */ /* Removed or set to auto */
-    width: 100%;
-    height: auto; /* Added to allow height to adjust based on content */
-}
+ /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.custom-video {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain; /* Maintains video aspect ratio */
-}
+    /* Body & Typography */
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      /* Soft gradient background */
+      background: linear-gradient(to bottom right, #FFF3F5, #FCE4EC);
+      line-height: 1.5;
+    }
 
-.video-controls {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+    /* Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      padding: 1rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      color: #ff6473; /* accent color */
+      margin-bottom: 0.25rem;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    /* Main Container */
+    main {
+      max-width: 1200px;
+      margin: 1rem auto;
+      padding: 1rem;
+    }
+
+    /* Video Gallery Grid */
+    .video-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Video Card */
+    .video-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Video Title */
+    .video-card h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 1rem;
+      color: #555;
+      line-height: 1.3;
+    }
+
+    /* Video Responsive Wrapper */
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      background: #000; /* fallback for no poster */
+    }
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
 
 .video-wrapper:hover .video-controls,
 .video-wrapper:focus-within .video-controls {
