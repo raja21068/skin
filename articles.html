@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <style>
+        /* Reset some default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding-bottom: 60px; /* To prevent content from being hidden behind the fixed footer */
+        }
+
+        header {
+            background-color: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 0 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .gallery img {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.2em;
+            }
+
+            footer {
+                font-size: 0.9em;
+            }
+        }
+
+        /* Optional Enhancements */
+
+        /* Smooth Scroll Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* CSS Variables for Theme Management */
+        :root {
+            --primary-color: #35424a;
+            --secondary-color: #f4f4f4;
+            --text-color: #333;
+            --header-footer-text: #ffffff;
+        }
+
+        body {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        header, footer {
+            background-color: var(--primary-color);
+            color: var(--header-footer-text);
+        }
+		
+		
+		 /* Footer Styles */
+        .footer {
+            background: #000;
+            border-top: 1px solid #333;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .footer a {
+            text-align: center;
+            color: #fff;
+            font-size: 0.875rem;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #ffcc00;
+        }
+
+        .footer a img {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 5px;
+            filter: invert(100%);
+            transition: transform 0.3s;
+        }
+
+        .footer a:hover img {
+            transform: scale(1.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .categories-container, .courses-container, .your-course-container {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            .category, .course {
+                padding: 10px;
+            }
+
+            .category img, .course img {
+                height: 120px;
+            }
+
+            .footer a {
+                font-size: 0.8rem;
+            }
+
+            .footer a img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .categories-container, .courses-container, .your-course-container {
+                grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+                gap: 10px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+            }
+
+            .category img, .course img {
+                height: 100px;
+            }
+
+            .footer a {
+                font-size: 0.75rem;
+            }
+
+            .footer a img {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        /* Additional Enhancements */
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Touch feedback for mobile */
+        .category:active, .course:active {
+            transform: scale(0.98);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Beautiful Image Gallery</h1>
+    </header>
+
+    <main>
+        <div class="gallery">
+            <img src="images/a1.jpg" alt="Image 1" loading="lazy">
+            <img src="images/a2.jpg" alt="Image 2" loading="lazy">
+            <img src="images/a3.jpg" alt="Image 3" loading="lazy">
+            <img src="images/a4.jpg" alt="Image 4" loading="lazy">
+            <img src="images/a5.jpg" alt="Image 5" loading="lazy">
+            <img src="images/a6.jpg" alt="Image 6" loading="lazy">
+            <img src="images/a7.jpg" alt="Image 7" loading="lazy">
+            <img src="images/a8.jpg" alt="Image 8" loading="lazy">
+            <img src="images/a9.jpg" alt="Image 9" loading="lazy">
+			<img src="images/a10.jpg" alt="Image 1" loading="lazy">
+            <img src="images/a11.jpg" alt="Image 2" loading="lazy">
+            
+            <img src="images/a13.jpg" alt="Image 4" loading="lazy">
+            <img src="images/a14.jpg" alt="Image 5" loading="lazy">
+            <img src="images/a15.jpg" alt="Image 6" loading="lazy">
+            <img src="images/a16.jpg" alt="Image 7" loading="lazy">
+            <img src="images/a17.jpg" alt="Image 8" loading="lazy">
+          
+        </div>
+    </main>
+</br>
+</br>
+</br>
+
+</br>
+
+</br>
+
+
+  <div class="footer">
+    <a href="index.html">
+        <img src="images/home.jpg" alt="Home">
+        <span>Home</span>
+    </a>
+    <a href="explore.html">
+        <img src="images/explore.jpg" alt="Explore">
+        <span>Explore</span>
+    </a>
+    <a href="course.html">
+        <img src="images/course.jpg" alt="Courses">
+        <span>Courses</span>
+    </a>
+    <a href="articles.html">
+        <img src="images/articles.jpg" alt="Articles">
+        <span>Articles</span>
+    </a>
+    <a href="#">
+        <img src="images/pro.jpg" alt="Pro">
+        <span>Pro</span>
+    </a>
+</div>
+</body>
+</html>
